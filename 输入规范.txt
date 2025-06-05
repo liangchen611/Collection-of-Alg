@@ -1,0 +1,13 @@
+1.开头，加上import sys.
+
+2.接受单个输入的值：
+变量名 = input()
+
+例：
+string = input()
+number = input()
+
+3.接收输入的多行输入，但具体输入行数不确定的情况，使用循环进行获取：
+for line in sys.stdin:
+
+sys.stdin：输入流（缓冲区，同一时间存放多个输入的数据）
