@@ -16,5 +16,6 @@ for i in range(0,T):
     print(CHARM)
     
 #sorted排序(排序的依据，排序的函数：lambda简易函数)
+#sorted最好和简易函数结合起来用
 # d = {'a': 3, 'b': 1, 'c': 2}
 # sorted_items = sorted(d.items(), key=lambda x: x[1])
