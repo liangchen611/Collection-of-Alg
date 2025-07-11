@@ -16,8 +16,6 @@ max_len = 0
 candidates = []
 
 
-# 
-
 for i in range(1,len(s)+1):
     for j in range(1,len(t)+1):
         if s[i-1] == t[j-1]:
