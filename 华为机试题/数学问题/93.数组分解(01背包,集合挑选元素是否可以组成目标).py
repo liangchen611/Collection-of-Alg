@@ -48,3 +48,35 @@ if can_balance(a,b,less):
     print("true")
 else:
     print("false")
+    
+# 思路：首先简化题目，将原本序列当中5和3的倍数全部分到a和b，之后剩下less，然后对a和b两个列表中的数值和进行作差，得到D
+"""
+再引入两个列表A和B，用来存放将要放入两个数组中的数
+
+假设要选取若干个数分别放到a和b，结果满足以下的式子：
+(sum(a)+ca) - (sum(b)+cb) = 0
+进一步推导以及移项：
+sum(a)-sum(b)+ca-cb=0
+D+ca-cb=0
+cb = D+ca
+
+并且，cb+ca=sum(C)
+cb = sum(C)-ca
+
+代入，得：
+D+ca-sum(C)+ca=0
+2ca = sum(C)-D
+所以要满足的条件有：1.sum(C)-D是偶数  2.存在一组和为ca的值，使得sum(C)-D/2
+"""
+
+# 要找出这样的组合，实际上就是个0-1背包问题，每个物品只能拿一次，不断组合得到集合
+"""
+    dp = set()
+    dp.add(0)
+    
+    for num in C:
+        new_dp = dp.copy()
+        for s in dp:
+            new_dp.add(s + num)
+        dp = new_dp
+"""
