@@ -29,6 +29,8 @@ class Solution:
         print(nums)
         return nums
         
+# 采用BFS-广度优先搜索的策略
+
 '''
 在一开始，先加入根节点到顶点队列（node_deque)当中，后续遍历中逐渐地将点逐个地出列与入列
 
